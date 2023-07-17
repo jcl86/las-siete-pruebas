@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E3233409-D95E-4F1B-936E-089848A3D415}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SietePruebas.Forms</RootNamespace>
+    <AssemblyName>SietePruebas.Forms</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.2.0\lib\net40\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Util.Core">
+      <HintPath>..\..\..\..\Repos\Util\Util.Forms\bin\Debug\Util.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomControls\CustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CustomButton.Designer.cs">
+      <DependentUpon>CustomButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\CrearJuego.cs" />
+    <Compile Include="Views\Apuestas\FrmApuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Apuestas\FrmApuesta.Designer.cs">
+      <DependentUpon>FrmApuesta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Apuestas\FrmFigura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Apuestas\FrmFigura.Designer.cs">
+      <DependentUpon>FrmFigura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLaTienes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLaTienes.Designer.cs">
+      <DependentUpon>FrmLaTienes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Apuestas\FrmDentroFuera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Apuestas\FrmDentroFuera.Designer.cs">
+      <DependentUpon>FrmDentroFuera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmResultado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmResultado.Designer.cs">
+      <DependentUpon>FrmResultado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Apuestas\FrmParImpar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Apuestas\FrmParImpar.Designer.cs">
+      <DependentUpon>FrmParImpar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Resultado\ResultadoFactory.cs" />
+    <Compile Include="Services\Resultado\ResultadoAciertoService.cs" />
+    <Compile Include="Services\Resultado\ResultadoFalloService.cs" />
+    <Compile Include="Services\Resultado\ResultadoService.cs" />
+    <Compile Include="UserControls\UcBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcBase.Designer.cs">
+      <DependentUpon>UcBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UcMensaje.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcMensaje.Designer.cs">
+      <DependentUpon>UcMensaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UcTitulo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcTitulo.Designer.cs">
+      <DependentUpon>UcTitulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmBase.Designer.cs">
+      <DependentUpon>FrmBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Apuestas\FrmMayorMenor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Apuestas\FrmMayorMenor.Designer.cs">
+      <DependentUpon>FrmMayorMenor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Apuestas\FrmAcertarPalo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Apuestas\FrmAcertarPalo.Designer.cs">
+      <DependentUpon>FrmAcertarPalo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Views\Apuestas\FrmFigura.resx">
+      <DependentUpon>FrmFigura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLaTienes.resx">
+      <DependentUpon>FrmLaTienes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Apuestas\FrmDentroFuera.resx">
+      <DependentUpon>FrmDentroFuera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmResultado.resx">
+      <DependentUpon>FrmResultado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Apuestas\FrmMayorMenor.resx">
+      <DependentUpon>FrmMayorMenor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Apuestas\FrmParImpar.resx">
+      <DependentUpon>FrmParImpar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Apuestas\FrmAcertarPalo.resx">
+      <DependentUpon>FrmAcertarPalo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="CustomControls\CustomButton.resx">
+      <DependentUpon>CustomButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UcBase.resx">
+      <DependentUpon>UcBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UcMensaje.resx">
+      <DependentUpon>UcMensaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UcTitulo.resx">
+      <DependentUpon>UcTitulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmBase.resx">
+      <DependentUpon>FrmBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11espadas.png" />
+    <None Include="Resources\11copas.png" />
+    <None Include="Resources\11bastos.png" />
+    <None Include="Resources\10oros.png" />
+    <None Include="Resources\10espadas.png" />
+    <None Include="Resources\10copas.png" />
+    <None Include="Resources\10bastos.png" />
+    <None Include="Resources\7oros.png" />
+    <None Include="Resources\7espadas.png" />
+    <None Include="Resources\7copas.png" />
+    <None Include="Resources\7bastos.png" />
+    <None Include="Resources\6oros.png" />
+    <None Include="Resources\6espadas.png" />
+    <None Include="Resources\6copas.png" />
+    <None Include="Resources\6bastos.png" />
+    <None Include="Resources\5oros.png" />
+    <None Include="Resources\5espadas.png" />
+    <None Include="Resources\5copas.png" />
+    <None Include="Resources\5bastos.png" />
+    <None Include="Resources\4oros.png" />
+    <None Include="Resources\4espadas.png" />
+    <None Include="Resources\4copas.png" />
+    <None Include="Resources\4bastos.png" />
+    <None Include="Resources\3oros.png" />
+    <None Include="Resources\3espadas.png" />
+    <None Include="Resources\3copas.png" />
+    <None Include="Resources\3bastos.png" />
+    <None Include="Resources\2oros.png" />
+    <None Include="Resources\2espadas.png" />
+    <None Include="Resources\2copas.png" />
+    <None Include="Resources\2bastos.png" />
+    <None Include="Resources\1oros.png" />
+    <None Include="Resources\1espadas.png" />
+    <None Include="Resources\1copas.png" />
+    <None Include="Resources\1bastos.png" />
+    <None Include="Resources\trasera.png" />
+    <None Include="Resources\12oros.png" />
+    <None Include="Resources\12espadas.png" />
+    <None Include="Resources\12copas.png" />
+    <None Include="Resources\12bastos.png" />
+    <None Include="Resources\11oros.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SietePruebas.Core\SietePruebas.Core.csproj">
+      <Project>{9012f757-9a02-4318-89cf-3b07e426bad9}</Project>
+      <Name>SietePruebas.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
